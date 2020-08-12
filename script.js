@@ -50,25 +50,30 @@ $(document).ready(function () {
 				// console.log(data.list[0].dt_txt)
 				console.log(data)
 
-				for (var i = 0; i < data.list.length; i++) {
-					let curr = data.list[i]
-					var date = curr.dt_txt;
-					var img = $("<img>").attr("src", "http://openweathermap.org/img/w/" + curr.weather[0].icon + ".png");
-					var temp = curr.temp;
-					var humidity = curr.humidity;
-					var speed = curr.wind.speed;
-					var newCard = `<div class="card" style="width: 18rem;">
-					<div class="card-header">
-					  ${citySearch}
+				for (var i = 0; i < data.list.length; i = i+8) {
+					console.log(data)
 				
-					</div>
-					<ul class="list-group list-group-flush">
-					  <li class="list-group-item">Date: ${date}</li>
-					  <li class="list-group-item">Temp: ${temp}</li>
-					  <li class="list-group-item">Humidity: ${humidity}</li>
-					</ul>
-				  </div>`
-					$("#forecast").append(newCard)
+				// 	let curr = data.list[i]
+				// 	var date = curr.dt_txt;
+				// 	// var img = $("<img>").attr("src", "http://openweathermap.org/img/w/" + curr.weather[0].icon + ".png");
+				// 	var temp = curr.temp;
+				// 	var humidity = curr.humidity;
+				// 	var speed = curr.wind.speed;
+				// 	console.log(humidity);
+				// 	console.log(speed);
+					
+				// 	var newCard = `<div class="card" style="width: 18rem;">
+				// 	<div class="card-header">
+				// 	  ${citySearch}
+				
+				// 	</div>
+				// 	<ul class="list-group list-group-flush">
+				// 	  <li class="list-group-item">Date: ${date}</li>
+				// 	  <li class="list-group-item">Temp: ${temp}</li>
+				// 	  <li class="list-group-item">Humidity: ${humidity}</li>
+				// 	</ul>
+				//   </div>`
+				// 	$("#forecast").append(newCard)
 				}
 				
 			}
