@@ -52,13 +52,23 @@ $(document).ready(function () {
 
 				for (var i = 0; i < data.list.length; i++) {
 					let curr = data.list[i]
-					var date = data.list.dt_txt;
-					var img = $("<img>").attr("src", "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
-					var temp = data.list.temp[i];
-					var humidity = data.list.humidity[i];
-					var speed = data.wind.speed[i];
-
-					$("#forecast").append(date, img, temp, humidity, newCard)
+					var date = curr.dt_txt;
+					var img = $("<img>").attr("src", "http://openweathermap.org/img/w/" + curr.weather[0].icon + ".png");
+					var temp = curr.temp;
+					var humidity = curr.humidity;
+					var speed = curr.wind.speed;
+					var newCard = `<div class="card" style="width: 18rem;">
+					<div class="card-header">
+					  ${citySearch}
+				
+					</div>
+					<ul class="list-group list-group-flush">
+					  <li class="list-group-item">Date: ${date}</li>
+					  <li class="list-group-item">Temp: ${temp}</li>
+					  <li class="list-group-item">Humidity: ${humidity}</li>
+					</ul>
+				  </div>`
+					$("#forecast").append(newCard)
 				}
 				
 			}
