@@ -14,16 +14,24 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header class="bg-primary pt-2 pb-2">
         <div class="container">
             <h1 class="text">Weather Dashboard</h1>
         </div>
     </header>
 
+    <!-- Main container -->
     <div class="container-fluid">
+
+        <!-- First row -->
         <div class="row">
+
+            <!-- First column -->
             <div class="col-lg-4 bg-light pt-3 pb-3">
                 <h5>Enter your city</h5>
+            
+                <!-- Search input -->
                 <div class="input-group ">
                     <input type="text" id="cityChoice" class="form-control" placeholder="city name">
                     <div class="input-group-append">
@@ -32,11 +40,15 @@
                         </button>
                     </div>
                 </div>
+
+                <!-- Start card -->
                 <div class="card">
                     <ul class="list-group list-group-flush list">
                     </ul>
                 </div>
             </div>
+
+            <!-- Second column -->
             <div class="col-lg-8 pt-3 pb-4">
                 <div id="citySearch" class="mt-4">
                 </div>
@@ -44,6 +56,7 @@
         </div>
     </div>
 
+    <!-- Second row -->
     <div class="mt-4 col-md-12">
         <h5 class="hide">5-Day Forecast:</h5>
         <div id="forecast" class="row">
@@ -53,6 +66,8 @@
   </div>
 
 </div>
+
+    <!-- jQuery, Popper.js, Bootstrap source codes -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
